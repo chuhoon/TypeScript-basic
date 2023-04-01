@@ -13,3 +13,9 @@ const add = (): number => {
 const sumAdd = (a: number, b: number): number => {
   return a + b;
 };
+
+// 함수 옵셔널 파라미터 '?'
+const log = (a: string, b?: string) => {};
+
+log('a');
+// log('a', new Person())
