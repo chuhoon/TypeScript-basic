@@ -1,5 +1,5 @@
-const sum = (a: number, b: number) => {
+const sum2 = (a: number, b: number) => {
   return a + b;
 };
 
-sum(10, 20);
+sum2(10, 20);

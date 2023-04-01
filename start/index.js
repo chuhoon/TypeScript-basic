@@ -1,4 +1,4 @@
-var sum = function (a, b) {
-    return a + b;
+var sum2 = function (a, b) {
+  return a + b;
 };
-sum(10, 20);
+sum2(10, 20);
