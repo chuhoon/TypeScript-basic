@@ -22,3 +22,19 @@ const logMessage2 = (value: string | number) => {
 
 logMessage2("123");
 logMessage2(123);
+
+interface Developer {
+  name: string;
+  skill: string;
+}
+
+interface Person {
+  name: string;
+  age: number;
+}
+
+const someonePerson = (someone: Developer | Person) => {
+  someone.name;
+  // someone.age; 에러
+  // someone.skill; 에러
+};
