@@ -38,3 +38,16 @@ const upperFunc = (obj: { name: string; age: number }) => {
   //  최신 자바스크립트
   console.log(obj.name?.toUpperCase());
 };
+
+// 타입 별칭
+type nameObj = {
+  name: string;
+  age: number;
+};
+
+const objFunc3 = (obj: nameObj) => {
+  console.log(obj.name);
+  console.log(obj.age);
+};
+
+objFunc3({ name: "hoon", age: 24 });
