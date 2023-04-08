@@ -36,4 +36,17 @@ interface StringArray {
 }
 
 let arr: StringArray = ['a', 'b', 'c'];
-arr[0] = 'a'; // 'a'
+// arr[0] = 10; // 'a'
+
+interface StringRegexDictionary {
+  [key: string]: RegExp; // 왼쪽 name key로 정의
+}
+
+let obj: StringRegexDictionary = {
+  name: /abc/,
+  cssFile: /\.css$/,
+  // css: 'css',
+};
+
+// Object.keys(obj).forEach(function (value) {});
+// obj['cssFile'] = 'a'; // 에러
