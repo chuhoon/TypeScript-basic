@@ -50,3 +50,22 @@ let obj: StringRegexDictionary = {
 
 // Object.keys(obj).forEach(function (value) {});
 // obj['cssFile'] = 'a'; // 에러
+
+// 인터페이스 확장 상속
+interface Person {
+  name: string;
+  age: number;
+}
+
+interface Developer extends Person {
+  // name: string;
+  // age: number; 확장 받음
+  language: string;
+}
+
+// 상속 받은 모든 타입 확장
+let captin: Developer = {
+  name: 'hoon',
+  age: 21,
+  language: 'korean',
+};
