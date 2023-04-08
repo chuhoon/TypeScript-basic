@@ -19,3 +19,13 @@ const user1 = {
 };
 
 getUser(user1);
+
+// 함수의 스펙에 인터페이스 활용
+interface sumFunction {
+  (a: number, b: number): number;
+}
+
+let sum: sumFunction;
+sum = function (a: number, b: number): number {
+  return a + b;
+};
