@@ -9,3 +9,13 @@ class Person {
 
 let hoon = new Person('경훈', 11);
 console.log(hoon); // Person 객체가 찍힘
+
+let user = {
+  name: '경훈',
+  age: 12,
+};
+
+let admin = {};
+admin.__proto__ = user;
+console.log(admin.age);
+console.log(admin.name);
