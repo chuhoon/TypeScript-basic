@@ -10,6 +10,12 @@ class Person {
 let hoon = new Person('경훈', 11);
 console.log(hoon); // Person 객체가 찍힘
 
+function Person2(name, age) {
+  this.name = name;
+  this.age = age;
+}
+let hoon2 = new Person2('경훈', 12);
+
 let user = {
   name: '경훈',
   age: 12,
