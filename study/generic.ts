@@ -35,3 +35,18 @@ const login = logText<boolean>(true);
 
 logText('a');
 logText('1');
+
+// 인터페이스 제네릭 선언 방법
+// interface Dropdown {
+//   value: string;
+//   selected: boolean;
+// }
+
+// const objDropdown: Dropdown = { value: 'abc', selected: false };
+
+interface Dropdown<T> {
+  value: T;
+  selected: boolean;
+}
+
+const objDropdown: Dropdown<string> = { value: 'abc', selected: false };
