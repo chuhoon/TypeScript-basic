@@ -50,3 +50,11 @@ interface Dropdown<T> {
 }
 
 const objDropdown: Dropdown<string> = { value: 'abc', selected: false };
+
+// 제네릭 타입 제한
+function logTextLength<T>(text: T[]): T[] {
+  console.log(text.length);
+  return text;
+}
+
+logTextLength<string>('hi');
