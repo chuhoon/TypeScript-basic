@@ -9,12 +9,30 @@ function getC(c = 10) {
 }
 
 // 타입 추론 2
+// interface DropDown<T> {
+//   value: T;
+//   title: string;
+// }
+
+// var shoppingItem: DropDown<string> = {
+//   value: 'down',
+//   title: '떨어짐',
+// };
+
+// 타입 추론 3
 interface DropDown<T> {
   value: T;
   title: string;
 }
 
-var shoppingItem: DropDown<string> = {
-  value: 'down',
-  title: '떨어짐',
+interface DetailedDropDown<T> extends DropDown<T> {
+  description: string;
+  tag: T;
+}
+
+var detailItem: DetailedDropDown<string> = {
+  title: 'abc',
+  description: 'abcd',
+  value: 'string type', // DropDown extends로 T가 같이 넘어감
+  tag: 'string stype',
 };
