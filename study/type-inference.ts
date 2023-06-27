@@ -36,3 +36,6 @@ var detailItem: DetailedDropDown<string> = {
   value: 'string type', // DropDown extends로 T가 같이 넘어감
   tag: 'string stype',
 };
+
+// Best common Type        var arr: (string | number | boolean)[]
+var arr = [1, 2, true, 'abc'];

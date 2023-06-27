@@ -104,4 +104,9 @@ class AddressBook {
   /* ------------------------------------------------ */
 }
 
+let div = document.querySelector('.container') as HTMLDivElement;
+// if (div) { 타입 단언 예제
+div.innerText;
+// }
+
 new AddressBook();
