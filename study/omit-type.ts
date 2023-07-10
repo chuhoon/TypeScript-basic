@@ -15,6 +15,6 @@ function fetchProducts(): Promise<Product[]> {
 type OmitShoppingItem = Omit<Product, 'stock' | 'brand'>;
 
 // 특정 product에서 일부만 필요한 함수
-function displayProductDetail(shoppingItem: OmitShoppingItem) {
+function displayProductDetails(shoppingItem: OmitShoppingItem) {
   // ..
 }
