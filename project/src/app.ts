@@ -1,8 +1,8 @@
 // utils
-function $(selector) {
+function $(selector: string) {
   return document.querySelector(selector);
 }
-function getUnixTimestamp(date) {
+function getUnixTimestamp(date: any) {
   return new Date(date).getTime();
 }
 
@@ -17,7 +17,7 @@ const recoveredList = $('.recovered-list');
 const deathSpinner = createSpinnerElement('deaths-spinner');
 const recoveredSpinner = createSpinnerElement('recovered-spinner');
 
-function createSpinnerElement(id) {
+function createSpinnerElement(id: any) {
   const wrapperDiv = document.createElement('div');
   wrapperDiv.setAttribute('id', id);
   wrapperDiv.setAttribute(
@@ -42,11 +42,11 @@ function fetchCovidSummary() {
   return axios.get(url);
 }
 
-fetchCovidSummary().then((res) => {
+fetchCovidSummary().then((res: any) => {
   console.log(res.Country); // 타입시스템 활용 가능
 });
 
-function fetchCountryInfo(countryCode, status) {
+function fetchCountryInfo(countryCode: any, status: any) {
   // params: confirmed, recovered, deaths
   const url = `https://api.covid19api.com/country/${countryCode}/status/${status}`;
   return axios.get(url);
@@ -63,7 +63,7 @@ function initEvents() {
   rankList.addEventListener('click', handleListClick);
 }
 
-async function handleListClick(event) {
+async function handleListClick(event: any) {
   let selectedId;
   if (
     event.target instanceof HTMLParagraphElement ||

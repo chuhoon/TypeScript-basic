@@ -11,6 +11,9 @@
 - [x] 타입스크립트 라이브러리 설치 (npm i typescript 등)
 - [x] 타입스크립트 설정 파일 생성 및 기본 값 추가 (tsconfig.json)
 - [x] 자바스크립트 파일을 타스 파일로 변환fetchCovidSummary
+- [x] `tsc` 명령어로 타입스크립트 컴파일
+
+2. 명시적인 `any` 설정하기
 
 ## 참고 자료
 
