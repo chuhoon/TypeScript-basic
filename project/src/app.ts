@@ -2,7 +2,8 @@
 function $(selector: string) {
   return document.querySelector(selector);
 }
-function getUnixTimestamp(date: any) {
+
+function getUnixTimestamp(date: Date) {
   return new Date(date).getTime();
 }
 
@@ -46,7 +47,13 @@ fetchCovidSummary().then((res: any) => {
   console.log(res.Country); // 타입시스템 활용 가능
 });
 
-function fetchCountryInfo(countryCode: any, status: any) {
+enum CovidStatus {
+  Confirmed = 'confirmed',
+  Recovered = 'recovered',
+  Deaths = 'deaths',
+}
+
+function fetchCountryInfo(countryCode: string, status: CovidStatus) {
   // params: confirmed, recovered, deaths
   const url = `https://api.covid19api.com/country/${countryCode}/status/${status}`;
   return axios.get(url);
@@ -84,11 +91,11 @@ async function handleListClick(event: any) {
   const { data: deathResponse } = await fetchCountryInfo(selectedId, 'deaths');
   const { data: recoveredResponse } = await fetchCountryInfo(
     selectedId,
-    'recovered'
+    CovidStatus.Deaths
   );
   const { data: confirmedResponse } = await fetchCountryInfo(
     selectedId,
-    'confirmed'
+    CovidStatus.Confirmed
   );
   endLoadingAnimation();
   setDeathsList(deathResponse);
