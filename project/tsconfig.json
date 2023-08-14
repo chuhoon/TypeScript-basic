@@ -3,7 +3,8 @@
     "allowJs": true, // 자바스크립트까지 검증
     "target": "ES5", // 해당 문법까지
     "outDir": "./built",
-    "moduleResolution": "Node" // Promise 관련 설정
+    "moduleResolution": "Node", // Promise 관련 설정
+    "lib": ["ES2015", "DOM", "DOM.Iterable"] // DOM 관련 에러
   },
   "include": ["./src/**/*"] // 프로젝트를 기준으로 해서 어떤 폴더를 대상으로 컴파일할건지
 }
